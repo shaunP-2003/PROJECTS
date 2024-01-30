@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Caveat:wght@500&family=Lobster+Two&family=Nanum+Myeongjo:wght@800&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Caveat:wght@500&family=Nanum+Myeongjo:wght@800&family=Permanent+Marker&family=Roboto:ital@1&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+.parallax {
+    /* The image used */
+    background-image: url("images/FishAndChips_background.jpg");
+
+    /* Set a specific height */
+    min-height: 590px;
+    height:590px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h2, h3{
+    /*    font-family: 'Alfa Slab One', cursive;
+        font-family: 'Caveat', cursive;
+        font-family: 'Nanum Myeongjo', serif;
+        font-family: 'Permanent Marker', cursive;*/
+
+    font-family: 'Lobster Two', cursive;
+}
+.center {
+    text-align: center;
+    color: black;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: transparent;
+}
+body{
+    background: transparent;
+}
+.container{
+
+    font-family: 'Lobster Two', cursive;
+    font-size: 20px;
+    font-weight: 400;
+}
+.navbar-icon {
+    width: 75px; /* Set the desired width */
+    height: 75px; /* Maintain the aspect ratio */
+}
+section{
+    position: relative;
+    width: 100%;
+    height:90vh;
+    top:0;
+}
+#products{
+    background: #0746BD;
+    background: linear-gradient(180deg, #0746BD, #001A4B);
+}
+.item{
+    width:300px;
+    /*    height:385px;*/
+}
+.item:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.line {
+    border-top: 1px solid black;
+    margin: 10px 0;
+}
+.line2{
+    border-top: 1px solid white;
+    margin: 10px 0;
+}
+.line3{
+    border-top: 1px solid black;
+    margin: 10px auto;
+    width: 25%;
+}
+.item{
+    transition: transform .2s;
+}
+.item:hover {
+    -ms-transform: scale(1.01);
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+}
+.item-and-button {
+    display: flex;
+    align-items: center;
+}
+.item-and-button p {
+    margin-right: 10px;
+}
+.footer{
+    background-color:#3586ff;
+    height:100px;
+}
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.image-container img {
+    background: transparent;
+    mix-blend-mode:multiply;
+    height: 400px;
+    padding-bottom: 20px
+}
+#banner{
+    position: relative;
+    z-index: 2;
+    /*    background: url(https://media.istockphoto.com/id/1185842145/vector/white-fishes-on-navy-blue-background-seamless-pattern.jpg?s=612x612&w=0&k=20&c=fHfvbNyLhxTYx6vodL3TeTER7qX6SahVL_IILrsI-8s=);*/
+}
+.navbar-dark .navbar-nav .nav-link {
+    font-family: 'Lobster Two', cursive;
+    font-size: 15px; /* Set your desired text color */
+    color:white;
+    transition: text-decoration 0.3s ease, color 0.3s ease;
+}
+.nav-item::after {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 2px;
+    background: #0746BD;
+    transition: 0.4s
+}
+/*https://bbbootstrap.com/snippets/simple-navbar-hover-17011029*/
+.nav-item:hover::after {
+    width: 100%
+}
+/*https://bbbootstrap.com/snippets/simple-navbar-hover-17011029*/
+
+.navbar-dark .navbar-nav .active>.nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show>.nav-link,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #fec400
+}
+/*https://bbbootstrap.com/snippets/simple-navbar-hover-17011029*/
+
+.nav-link {
+    padding: 25px 5px;
+    transition: 0.2s
+}
+/*https://bbbootstrap.com/snippets/simple-navbar-hover-17011029*/
+.wave
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(images/wave.png);
+    background-size: 1000px 100px;
+}
+.wave#wave1
+{
+    z-index: 1000;
+    opacity: 1;
+    background-position-x: 400px;
+    animation: animate 3s ease-in-out infinite;
+    animation-delay: calc(--i * 0.25s)
+}
+.wave#wave2
+{
+    z-index: 999;
+    opacity: 0.5;
+    background-position-x: 300px;
+    animation: animate 2s ease-in-out infinite;
+    animation-delay: calc(--i * 0.25s)
+}
+.wave#wave3
+{
+    z-index: 998;
+    opacity:0.2;
+    background-position-x: 200px;
+}
+.wave#wave4
+{
+    z-index: 998;
+    opacity: 0.7;
+    background-position-x: 100px;
+    animation: animate 2.5s ease-in-out infinite;
+    animation-delay: calc(--i * 0.25s)
+}
+#about {
+    background-color: white;
+    position: relative;
+}
+@keyframes animate
+{
+    0%,100%
+    {
+        transform: translateY(0px);
+    }
+    50%
+    {
+        transform: translateY(20px);
+    }
+}
+.text-center {
+    text-align: center;
+}
+.mt-5 {
+    margin-top: 5rem;
+}
+.rounded-image {
+    max-width: 400px;
+    border-radius: 10px; /* Adjust the value to change the amount of rounding */
+    /* Adjust the value to set the maximum width of the image */
+    background-color: transparent;
+}
+.container2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px 50px;
+    padding: 100px 50px;
+}
+.container2 .card {
+    position: relative;
+    font-family: 'Lobster Two', cursive;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 350px;
+    height: 300px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+    transition: 0.5s;
+}
+.container2 .card:hover {
+    height: 400px;
+}
+.container2 .card .imgBx {
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    background: #333;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: 0.5s;
+}
+.container2 .card:hover .imgBx {
+    top: -100px;
+    transform: scale(0.75);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+.container2 .card .imgBx img{
+    position: absolute;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container2 .card .content{
+    position: absolute;
+    top: 252px;
+    width: 100%;
+    padding: 0 30px;
+    height: 35px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.5s;
+}
+.container2 .card:hover .content{
+    top: 130px;
+    height: 250px;
+}
+.container2 .card .content h2{
+    font-size: 1.5em;
+    font-weight: 700;
+/*    color: black;*/
+}
+.container2 .card .content p{
+    color: black;
+}
+.container2 .card .content a{
+    position: relative;
+    top:15px;
+    display:inline-block;
+    padding: 12px 25px;
+    background:var(--clr);
+    color:#fff;
+    font-weight:500;
+    text-decoration: none;
+    border-radius: 8px;
+}
+/*https://www.youtube.com/watch?v=2ipVafDw2ss*/
+.dark_blue_wave{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(images/dark_blue_wave.png);
+    background-size: 1000px 100px;
+}
+.dark_blue_wave#wave11
+{
+    z-index: 0;
+    opacity: 1;
+    background-position-x: 100px;
+    animation: animate 2s ease-in-out infinite;
+    animation-delay: calc(--i * 0.25s)
+}
+.blue_wave{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(images/blue_wave.png);
+    background-size: 1000px 100px;
+}
+.blue_wave#wave5
+{
+    z-index: 999;
+    opacity: 1;
+    background-position-x: 300px;
+    animation: animate 2s ease-in-out infinite;
+    animation-delay: calc(--i * 0.25s)
+}
+.blue_wave#wave6
+{
+    z-index: 998;
+    opacity:0.2;
+    background-position-x: 200px;
+}
+.blue_wave#wave7
+{
+    z-index: 998;
+    opacity: 0.7;
+    background-position-x: 100px;
+    animation: animate 2.5s ease-in-out infinite;
+    animation-delay: calc(--i * 0.25s)
+}
+.blue_wave#wave8
+{
+    z-index: 998;
+    opacity: 0.7;
+    background-position-x: 100px;
+    animation: animate 2.5s ease-in-out infinite;
+    animation-delay: calc(--i * 0.25s)
+}
+.blue_wave#wave9
+{
+    opacity: 100%;
+    background-position-x: 100px;
+    animation: animate 2.5s ease-in-out infinite;
+    animation-delay: calc(--i * 0.25s)
+}
+/*blackwave*/
+.black_wave{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(images/black_wave.png);
+    background-size: 1000px 100px;
+}
+.black_wave#wave10
+{
+    opacity: 1;
+    background-position-x: 600px;
+    animation: animate 2s ease-in-out infinite;
+    animation-delay: calc(--i * 0.25s)
+}
+
